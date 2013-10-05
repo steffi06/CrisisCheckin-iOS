@@ -14,19 +14,33 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    UIView *titleView = [[UIView alloc] initWithFrame:self.navigationController.navigationBar.frame];
-    UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"toolbox_icon"]];
-    iconView.frame = CGRectMake(65, 5, 40, 40);
-    [titleView addSubview:iconView];
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(105, 5, 200, 40)];
+    [self setupNavigationItemTitleView];
+}
+
+- (void)setupNavigationItemTitleView {
+    CGRect navigationBarFrame = self.navigationController.navigationBar.frame;
+    CGFloat navigationBarWidth = navigationBarFrame.size.width;
+    UIView *titleView = [[UIView alloc] initWithFrame:navigationBarFrame];
+    [titleView addSubview:[self iconImageViewForTitleViewWithWidth:navigationBarWidth]];
+    [titleView addSubview:[self titleLabelForTitleViewWithWidth:navigationBarWidth]];
+    self.navigationItem.titleView = titleView;
+}
+
+- (UIImageView *)iconImageViewForTitleViewWithWidth:(CGFloat) navigationBarWidth {
+    UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-red"]];
+    iconView.frame = CGRectMake(0.5 * navigationBarWidth - 0.5 * 195, 5, 40, 40);
+    iconView.contentMode = UIViewContentModeScaleAspectFit;
+    return iconView;
+}
+
+- (UILabel *)titleLabelForTitleViewWithWidth:(CGFloat) navigationBarWidth {
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.5 * navigationBarWidth - 0.5 * 195 + 45, 5, 200, 40)];
     titleLabel.text = @"Crisis Check-in";
     titleLabel.textColor = [UIColor whiteColor];
-    [titleView addSubview:titleLabel];
-    self.navigationItem.titleView = titleView;
+    return titleLabel;
 }
 
 - (void)didReceiveMemoryWarning
