@@ -17,7 +17,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    UIView *titleView = [[UIView alloc] initWithFrame:self.navigationController.navigationBar.frame];
+    UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"toolbox_icon"]];
+    iconView.frame = CGRectMake(65, 5, 40, 40);
+    [titleView addSubview:iconView];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(105, 5, 200, 40)];
+    titleLabel.text = @"Crisis Check-in";
+    titleLabel.textColor = [UIColor whiteColor];
+    [titleView addSubview:titleLabel];
+    self.navigationItem.titleView = titleView;
 }
 
 - (void)didReceiveMemoryWarning

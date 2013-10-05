@@ -22,6 +22,7 @@
 		BE7B2C3C180074FB00D0932D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7B2C1B180074FB00D0932D /* UIKit.framework */; };
 		BE7B2C44180074FB00D0932D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE7B2C42180074FB00D0932D /* InfoPlist.strings */; };
 		BE7B2C46180074FB00D0932D /* CrisisCheckin_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7B2C45180074FB00D0932D /* CrisisCheckin_iOSTests.m */; };
+		BE7B2C501800791D00D0932D /* toolbox_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE7B2C4F1800791D00D0932D /* toolbox_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		BE7B2C41180074FB00D0932D /* CrisisCheckin-iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrisisCheckin-iOSTests-Info.plist"; sourceTree = "<group>"; };
 		BE7B2C43180074FB00D0932D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BE7B2C45180074FB00D0932D /* CrisisCheckin_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrisisCheckin_iOSTests.m; sourceTree = "<group>"; };
+		BE7B2C4F1800791D00D0932D /* toolbox_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toolbox_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		BE7B2C1E180074FB00D0932D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BE7B2C4F1800791D00D0932D /* toolbox_icon.png */,
 				BE7B2C1F180074FB00D0932D /* CrisisCheckin-iOS-Info.plist */,
 				BE7B2C20180074FB00D0932D /* InfoPlist.strings */,
 				BE7B2C23180074FB00D0932D /* main.m */,
@@ -233,6 +236,7 @@
 			files = (
 				BE7B2C2E180074FB00D0932D /* Main_iPad.storyboard in Resources */,
 				BE7B2C33180074FB00D0932D /* Images.xcassets in Resources */,
+				BE7B2C501800791D00D0932D /* toolbox_icon.png in Resources */,
 				BE7B2C2B180074FB00D0932D /* Main_iPhone.storyboard in Resources */,
 				BE7B2C22180074FB00D0932D /* InfoPlist.strings in Resources */,
 			);
